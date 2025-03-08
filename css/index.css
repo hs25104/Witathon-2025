@@ -20,7 +20,7 @@ a{
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background: #ffa725;
     padding: 6px 6%;
     position: sticky;
@@ -40,20 +40,20 @@ a{
     list-style: none;
 }
 
-.navbar-center ul li a {
-    display: flex;
+.navbar-center ul li a{
+    display: flex ;
     align-items: center;
     font-size: 14px;
     margin: 5px 8px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
     width: 70px;
     position: relative;
 }
 
 .navbar-center span{
     width: 30px;
-    padding-left: 5px;
+    padding-left: 3px;
     padding-right: 20px;
 }
 
@@ -67,7 +67,7 @@ a{
     height: 2px;
     background: #151f1b;
     position: absolute;
-    bottom: -15px;
+    bottom: -5px;
     transition: width 0.3s;
 }
 
@@ -193,7 +193,7 @@ a{
     border-top: 1px solid #151f1b;
 }
 
-.sidebar-profile-link a{
+.sidebar-profile-link {
     flex-basis: 50%;
     display: flex;
     align-items: center;
