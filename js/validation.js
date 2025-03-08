@@ -1,22 +1,13 @@
 const form = document.getElementById('form')
-const name_input = document.getElementById('name-input')
-const email_input = document.getElementById('email-input')
+const username = document.getElementById('username-input')
 const password_input = document.getElementById('password-input')
-const confirm_password_input = document.getElementById('confirm-password-input')
 const error_message = document.getElementById('error-message')
 
 form.addEventListener('submit', (e) =>{
     let errors = []
 
-    if(name_input){
-        // if there is a name input, then the user is using the sign up form
-        errors = getSignupFormErrors(name_input.ariaValueMax, email_input.ariaValueMax, password_input.ariaValueMax, confirm_password_input.value)
-    }
-    else{
-        // if there is no name input, then the user is using the log in form
-        errors = getLoginFormErrors(email_input.value, password_input.value)
-    }
-
+    errors = getLoginFormErrors(username.value, password_input.value)
+    
     if(errors.length > 0){
         // if there are any errors
         e.preventDefault()
@@ -24,7 +15,7 @@ form.addEventListener('submit', (e) =>{
     }
 })
 
-function getSignupFormErrors(name, email, password, confirmPassword){
+function getSignupFormErrors(name, password){
     let errors = []
 
     if (name == '' || name == null){
@@ -32,10 +23,6 @@ function getSignupFormErrors(name, email, password, confirmPassword){
         name_input.parentElement.classList.add('incorrect')
     }
 
-    if (email == '' || email == null){
-        errors.push('Email is required')
-        name_input.parentElement.classList.add('incorrect')
-    }
 
     if (password == '' || password == null){
         errors.push('Password is required')
@@ -58,11 +45,6 @@ function getSignupFormErrors(name, email, password, confirmPassword){
 
 function getLoginFormErrors(email, password){
     let errors = []
-
-    if (email == '' || email == null){
-        errors.push('Email is required')
-        name_input.parentElement.classList.add('incorrect')
-    }
 
     if (password == '' || password == null) {
         errors.push('Password is required')
