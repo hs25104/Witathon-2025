@@ -191,6 +191,7 @@ a{
     display: flex;
     align-items: center;
     border-top: 1px solid #151f1b;
+    flex-direction: column;
 }
 
 .sidebar-profile-link {
@@ -201,6 +202,12 @@ a{
     padding: 15px 0;
     font-size: 13px;
     border-left: 1px solid #151f1b;
+}
+
+.sidebar-profile-link a{
+    width: 20px;
+    margin-right: 10px;
+
 }
 
 .sidebar-profile-link a:first-child{
