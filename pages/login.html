@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/login.css">
     <script type="text/javascript" src="../js/validation.js" defer></script>
-    <script type="module" src="../backend/database/db_validation.js" defer></script> 
+    <script type="module" src="../backend/database/member-login.js" defer></script> 
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         </p>
         <form id="form" onsubmit="login(event)">
             <div>
-                <label for="email-input">
+                <label for="username-input">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFF3B0"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
                 </label>
                 <input required type="username" name="username" id="username-input" placeholder="Username">

@@ -8,17 +8,17 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export async function login(event) {
     event.preventDefault(); 
 
-    const email = document.getElementById("email-input").value;
+    const username = document.getElementById("username-input").value;
     const password = document.getElementById("password-input").value;
 
     const { data, error } = await supabase
-        .from('leader_data')
+        .from('user_data')
         .select('password') 
-        .eq('email', email) 
+        .eq('username', username) 
         .single(); 
 
     if (error) {
-        document.getElementById("error-message").innerText = "Email not found!";
+        document.getElementById("error-message").innerText = "Username not found!";
         return;
     }
 
@@ -29,16 +29,11 @@ export async function login(event) {
         document.getElementById("error-message").style.color = "green"; 
 
         setTimeout(() => {
-            window.location.href = "leader-dash.html"; 
+            window.location.href = "index.html"; 
         }, 2000); 
     } else {
         document.getElementById("error-message").innerText = "Incorrect password!";
         document.getElementById("error-message").style.color = "red";
-    }
-
-    if (data) {
-        sessionStorage.setItem('institutionName', data.institution_name);
-        sessionStorage.setItem('institutionType', data.institution_type);
     }
 }
 

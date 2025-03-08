@@ -12,31 +12,40 @@ function generate_password(length) {
     const possible_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        result += characters.charAt(randomIndex);
+        const randomIndex = Math.floor(Math.random() * possible_chars.length);
+        result += possible_chars.charAt(randomIndex);
     }
     return result;
 }
 
-function generate_username(firstname, lastname)
-{
-    let result = '';
-    result += firstname[0].toLowerCase();
-    result += lastname.toLowerCase();
-    result += Math.floor(Math.random * 4).toString();
-    return result;
-}
-
 export async function member_sign_up(firstName, lastName) {
+    const baseUsername = `${firstName[0].toLowerCase()}${lastName.toLowerCase()}`;
+    
+    const { data: existingUsers, error: fetchError } = await supabase
+        .from('user_data')
+        .select('username')
+        .ilike('username', `${baseUsername}%`);
+
+    if (fetchError) {
+        console.error('Error fetching usernames:', fetchError);
+        return;
+    }
+
+    let maxNumber = 0;
+    existingUsers.forEach(user => {
+        const match = user.username.match(new RegExp(`^${baseUsername}(\\d*)$`));
+        if (match && match[1]) {
+            maxNumber = Math.max(maxNumber, parseInt(match[1], 10));
+        }
+    });
+
+    const newUsername = `${baseUsername}${maxNumber + 1}`;
 
     const password = generate_password(PASSWORD_LENGTH);
-
-    const generated_username = generate_username(firstName, lastName);
-
-    // assumed that members share the same institution name as their community leaders so autofill this 
     const institutionName = sessionStorage.getItem('institutionName');
-
     const hashedPassword = await bcrypt.hash(password, 10);
+
+    console.log(password)
 
     const { data, error } = await supabase
         .from('user_data')
@@ -44,14 +53,14 @@ export async function member_sign_up(firstName, lastName) {
             {
                 first_name: firstName,
                 last_name: lastName,
-                username: generated_username,
+                username: newUsername,
                 institution: institutionName,
                 password: hashedPassword, 
             }
         ]);
 
     if (error) {
-        console.error('Error:', error);
+        console.error('Error inserting data:', error);
     } else {
         console.log('Data inserted:', data);
     }
