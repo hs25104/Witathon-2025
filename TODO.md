@@ -1,1 +1,0 @@
-- [ ] fix the svg icons in the signup.html page
