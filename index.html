@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<! –– TODO: FIX LOGO -->
-<! –– TODO: USER PHOTO? -->
-
 <body>
     <nav class="navbar">
         <div class="navbar-left">
-            <a href="index.html" class="logo"> <img src:"assets/logo.png"></a>
+            <a href="index.html"> <img src="assets/logo.png" class="logo"></a>
+
+            <div class="search-box">
+                <img src="assets/search.png">
+                <input type="text" placeholder="Search">
+            </dive>
         </div>
 
         <div class="navbar-center">
             <ul>
-                <li><a href="#"><img src="assets/home.png"> <span>Home</span> </a></li>
+                <li><a href="#" class="active-link"><img src="assets/home.png"> <span>Home</span> </a></li>
                 <li><a href="#"><img src="assets/group.png"> <span>My Groups</span></a></li>
                 <li><a href="#"><img src="assets/event.png"> <span>My Events</span></a></li>
                 <li><a href="#"><img src="assets/notifications.png"> <span>Notifications</span></a></li>
@@ -26,9 +28,41 @@
         </div>
 
         <div class="navbar-right">
-            <img src="assets/user.png" class="nav-profile-img"
+            <div class="online">
+                <img src="assets/user.png" class="nav-profile-img"
+            </div>
         </div>
     </nav>
+
+    <!------- navbar end ------- -->
+
+    <div class="container">
+
+        <!------- left sidebar ------- -->
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="assets/cover-pic.png" width="100%">
+                <div class="sidebar-profile-info">
+                    <img src="assets/user-1.png">
+                    <h1>Holly Smith</h1>
+                    <h3>Student at University of Bath</h3>
+                    <ul>
+                        <li>Community friends<span>21</span></li>
+                        <li>Number of groups<span>3</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href="#"><img src="assests/items.png" My Friends</a>
+                </div>
+            </div>
+        </div>
+
+        <!------- main content ------- -->
+        <div class="main-content"></div>
+
+        <!------- right sidebar ------- -->
+        <div class="right-sidebar"></div>
+    </div>
 
     <a href="pages/login.html">login</a> 
 </body>

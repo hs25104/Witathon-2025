@@ -8,7 +8,7 @@
 }
 
 body{
-    background: #c1d8c3;
+    background: #fff5e4;
     color: #151f1b;
 }
 
@@ -30,7 +30,7 @@ a{
 }
 
 .logo{
-    width: 30px;
+    width: 40px;
     margin-right: 15px;
     display: block;
 }
@@ -48,6 +48,7 @@ a{
     padding-left: 5px;
     padding-right: 5px;
     width: 70px;
+    position: relative;
 }
 
 .navbar-center span{
@@ -60,6 +61,22 @@ a{
     width: 30px;
 }
 
+.navbar-center ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #151f1b;
+    position: absolute;
+    bottom: -15px;
+    transition: width 0.3s;
+}
+
+.navbar-center ul li a:hover::after,
+.navbar-center ul li a.active-link::after{
+    width: 100%;
+}
+
+
 .nav-profile-img{
     width: 40px;
     border-radius: 50%;
@@ -68,3 +85,120 @@ a{
     position: relative;
 }
 
+.online{
+    position: relative;
+}
+
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff5e4;
+    border-radius: 50%;
+    right: 0px;
+    top: 0px;
+    background: #41db51;
+    position: absolute;
+}
+
+.search-box{
+    background: #fff;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+}
+
+.search-box img{
+    width: 18px;
+}
+
+.search-box input{
+    width: 100px;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+
+/*------- navbar end -------*/
+
+.container{
+    padding: 20px 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*------- left sidebar -------*/
+
+.left-sidebar{
+    flex-basis: 25%;
+    align-self: flex-start;
+}
+
+.sidebar-profile-box{
+    background: #c1d8c3;
+}
+
+.sidebar-profile-info{
+    padding: 0 25px;
+}
+
+.sidebar-profile-info img{
+    width: 90px;
+    border-radius: 50%;
+    background: #ffa725;
+    padding: 4px;
+    margin-top: -45px;
+}
+
+.sidebar-profile-info h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #151f1b;
+}
+
+.sidebar-profile-info h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: #151f1b;
+}
+
+.sidebar-profile-info ul{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.sidebar-profile-info ul{
+    width: 100%;
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+.sidebar-profile-info ul span{
+    float: right;
+    color: #151f1b;
+}
+
+
+
+/*------- right sidebar -------*/
+
+.right-sidebar{
+    flex-basis: 25%;
+    align-self: flex-start;
+}
+
+/*------- main content -------*/
+
+.main-content{
+    flex-basis: 47%;
+    align-self: flex-start;
+}
