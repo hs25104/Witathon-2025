@@ -20,7 +20,7 @@ a{
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background: #ffa725;
     padding: 6px 6%;
     position: sticky;
@@ -246,4 +246,55 @@ a{
 .post p{
     font-size: 14px;
     margin-bottom: 15px;
+}
+
+.post-stats{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    border-bottom: 1px solid #151f1b;
+    padding-bottom: 6px;
+}
+
+.post-stats div{
+    display: flex;
+    align-items: center;
+}
+
+.post-stats img{
+    width: 20px;
+    margin-right: 2px;
+}
+
+.liked-users{
+    margin-left: 20px;
+}
+
+.post-activity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.post-activity div{
+    display: flex;
+    align-items: center;
+}
+
+.post-activity-user-icon{
+    width: 45px;
+    border-radius: 50%;
+}
+
+.post-activity-link img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 22px;
+    margin-right: 8px;
 }
