@@ -29,11 +29,18 @@ export async function login(event) {
         document.getElementById("error-message").style.color = "green"; 
 
         setTimeout(() => {
-            window.location.href = "index.html"; 
+            window.location.href = "leader-dash.html"; 
         }, 2000); 
     } else {
         document.getElementById("error-message").innerText = "Incorrect password!";
         document.getElementById("error-message").style.color = "red";
+    }
+
+    if (data) {
+        sessionStorage.setItem('institutionName', data.institution_name);
+        sessionStorage.setItem('institutionType', data.institution_type);
+
+        window.location.href = 'signup.html';
     }
 }
 
