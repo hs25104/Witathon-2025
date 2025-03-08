@@ -64,10 +64,10 @@ function getLoginFormErrors(email, password){
         name_input.parentElement.classList.add('incorrect')
     }
 
-    if (password == '' || password == null){
+    if (password == '' || password == null) {
         errors.push('Password is required')
         name_input.parentElement.classList.add('incorrect')
-
+    }
     return errors;
 }
 
@@ -82,4 +82,3 @@ allInputs.forEach(input => {
         }
     })
 })
-}

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scal=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/login.css">
-    <script type="text/javascript" src="validation.js" defer></script>
+    <script type="text/javascript" src="../js/validation.js" defer></script>
+    <script type="module" src="../backend/database/db_validation.js" defer></script>
 </head>
 
 <body>
@@ -36,6 +37,7 @@
         </p>
         <p> <b>Not a part of our network? </b>Sign up <a href="signup.html">here</a></p>
         <p><a href="login.html">Back to Member Login</a> </p>
+        <p id="success-message" style="color: green; display: none;"></p>
     </div>
 </body>
 
