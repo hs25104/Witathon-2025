@@ -29,7 +29,7 @@ export async function login(event) {
         document.getElementById("error-message").style.color = "green"; 
 
         setTimeout(() => {
-            window.location.href = "index.html"; 
+            window.location.href = ""; 
         }, 2000); 
     } else {
         document.getElementById("error-message").innerText = "Incorrect password!";
