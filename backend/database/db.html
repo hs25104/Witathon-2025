@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Test</title>
+    <script type="module" src="db.js" defer></script>
+</head>
+<body>
+    <button id="test-db-btn">Test Database</button>
+
+  <!-- Inline module that imports test_database and attaches an event listener -->
+        <script type="module">
+            import { test_database } from './db.js'; // Ensure the path is correct
+
+            // Bind the click event to the function
+            document.getElementById('test-db-btn').addEventListener('click', test_database);
+        </script>
+</body>
+</html>
