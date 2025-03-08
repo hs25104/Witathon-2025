@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: funnel-sans, sans-serif;
+    font-family: "Funnel Sans", sans-serif;
     box-sizing: border-box;
 }
 
@@ -54,7 +54,7 @@ a{
 .navbar-center span{
     width: 30px;
     padding-left: 5px;
-    padding-right: 20px
+    padding-right: 20px;
 }
 
 .navbar-center ul li a img{
@@ -80,7 +80,7 @@ a{
 .nav-profile-img{
     width: 40px;
     border-radius: 50%;
-    display: blocl;
+    display: block;
     cursor: pointer;
     position: relative;
 }
@@ -176,7 +176,7 @@ a{
     margin: 20px 0;
 }
 
-.sidebar-profile-info ul{
+.sidebar-profile-info ul a{
     width: 100%;
     margin: 5px 0;
     font-size: 13px;
@@ -185,6 +185,33 @@ a{
 .sidebar-profile-info ul span{
     float: right;
     color: #151f1b;
+}
+
+.sidebar-profile-link{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #151f1b;
+}
+
+.sidebar-profile-link a{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    font-size: 13px;
+    border-left: 1px solid #151f1b;
+}
+
+.sidebar-profile-link a:first-child{
+    width: 20px;
+    margin-right: 10px;
+
+}
+
+.sidebar-profile-link a img{
+    border-left: 0;
+    width: 30px;
 }
 
 
