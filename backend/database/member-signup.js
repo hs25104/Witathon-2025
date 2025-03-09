@@ -59,9 +59,13 @@ export async function member_sign_up(firstName, lastName) {
             }
         ]);
 
-    if (error) {
-        console.error('Error inserting data:', error);
-    } else {
-        console.log('Data inserted:', data);
-    }
+        if (error) {
+            console.error('Error inserting data:', error);
+            return { success: false, message: 'Error creating user.' };
+        } else {
+            return {
+                success: true,
+                message: `User created successfully! \n Username: ${newUsername}, Password: ${password}`
+            };
+        }
 }
