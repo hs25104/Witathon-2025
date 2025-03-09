@@ -380,6 +380,7 @@ a{
     border-radius: 50%;
     margin-right: 15px;
 }
+
 /*------- profile page ------- */
 
 .profile-main{
@@ -389,7 +390,10 @@ a{
 }
 
 .profile-container{
-    background: #fff5e4;
+    background: #c1d8c3;
+    border-style: solid;
+    border-color: #6a9c89;
+    border-width: 3px;
 }
 
 .profile-container-inner{
@@ -415,4 +419,86 @@ a{
     color: #151f1b
 }
 
+.mutual-groups{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
 
+.mutual-groups img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.profile-btn{
+    margin: 20px 0;
+}
+
+.profile-btn a{
+    display: inline-flex;
+    align-items: center;
+    background: #f17b47;
+    padding: 6px 15px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.profile-btn a img{
+    width: 18px;
+    margin-right: 3px;
+}
+
+/*------- media query for smaller screens ------- */
+
+@media only screen and (max-width: 600px){
+    .search-box{
+        background: transparent;
+        width: auto;
+        padding: 0;
+    }
+    .search-box.input{
+        width: 0;
+        padding: 0;
+    }
+    .navbar-center ul li a span{
+        display: none;
+    }
+    .navbar-center ul li a{
+        padding-right: 0;
+        margin: 5px;
+    }
+    .nav-profile-img{
+        width: 30px;
+    }
+    .container{
+        padding: 15px 3%;
+    }
+    .left-sidebar{
+        flex-basis: 100%;
+        position: relative;
+        top: unset;
+    }
+    .main-content{
+        flex-basis: 100%;
+    }
+    .post-stats div{
+        margin: 2px 0;
+    }
+    .post-activity-link{
+        display: none;
+    }
+    .post-activity-link img{
+        margin-right: 0;
+    }
+    .profile-main{
+        flex-basis: 100%;
+    }
+    .profile-container{
+        font-size: 14px;
+    }
+    .profile-pic{
+        width: 100px;
+        margin-top: -50px;
+    }
+}

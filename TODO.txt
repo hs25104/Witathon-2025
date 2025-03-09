@@ -1,5 +1,30 @@
-- link homepage buttons to their pages
 - allow users to interact with events
 - save events 
 - view events pages
 - view groups pages
+
+Hi madgey <3
+I have finished the bulk of everything so all we need to do now is polish!
+
+- I have connected the logout, profile and home buttons -
+but havent done login/signin but that should be easy
+
+- Make sure the font is consistent throughout, im using #151f1b
+and Fuller Sans font
+
+- I still might try to have a go at the navigation bar but its not a priority just yet
+
+- The like, comment etc icons need debuggling to they sit side by side
+
+- The calander and my community leader needs adjusting so its aligned properly,
+again not the biggest priority
+
+- For some reason the sidebar is not sticking but it's a small detail
+
+- Going to adjust the text colouring on the navigation also 
+
+- Then we can always add to the slides
+
+- (big) if i have time, i can work on some more pages but i probably cba
+
+- All just little things so we're in a good place i think :)
