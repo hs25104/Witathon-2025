@@ -1,0 +1,5 @@
+- link homepage buttons to their pages
+- allow users to interact with events
+- save events 
+- view events pages
+- view groups pages
