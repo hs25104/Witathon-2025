@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root{
-    --accent-color: #FFA725;
+    --accent-color: #f17b47;
     --base-color: #FFF5E4;
     --text-color: #151f1b;
     --input-color: #F4A261;
@@ -138,6 +138,7 @@ form button{
     text-transform: uppercase;
     cursor: pointer;
     transition: 150ms ease;
+    color: white;
 }
 
 form button:hover{
@@ -151,7 +152,22 @@ form button:focus{
 
 a{
     text-decoration: none;
-    color: #6A9C89;
+    color: var;
+}
+
+.community-login-button{
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+    color: white;
 }
 
 a:hover{

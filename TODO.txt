@@ -3,14 +3,8 @@
 - view events pages
 - view groups pages
 
-Hi madgey <3
-I have finished the bulk of everything so all we need to do now is polish!
-
 - I have connected the logout, profile and home buttons -
 but havent done login/signin but that should be easy 
-
-- Make sure the font is consistent throughout, im using #151f1b
-and Fuller Sans font - BOSH
 
 - I still might try to have a go at the navigation bar but its not a priority just yet - wym
 
