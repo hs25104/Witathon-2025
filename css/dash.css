@@ -7,6 +7,18 @@
     box-sizing: border-box;
 }
 
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #f17b47;
+    padding: 6px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.15);
+}
+
 body{
     background: #fff5e4;
     color: #151f1b;
@@ -15,18 +27,6 @@ body{
 a{
     text-decoration: none;
     color: #151f1b;
-}
-
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background: #ffa725;
-    padding: 6px 6%;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
 }
 
 .logo{
@@ -223,7 +223,7 @@ a{
 /*------- main content -------*/
 
 .main-content{
-    flex-basis: 77%;
+    flex-basis: 60%;
     align-self: flex-start;
 }
 
@@ -260,6 +260,24 @@ a{
 .post p{
     font-size: 14px;
     margin-bottom: 15px;
+}
+
+.post-activity div{
+    display: flex;
+    align-items: center;
+}
+
+.post-activity-user-icon{
+    width: 45px;
+    border-radius: 50%;
+}
+
+.post-activity-link img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 22px;
+    margin-right: 8px;
 }
 
 .container h1 {

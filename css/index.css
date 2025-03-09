@@ -502,3 +502,19 @@ a{
         margin-top: -50px;
     }
 }
+
+.profile-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.profile-menu-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #151f1b;
+    transition: background 0.3s;
+}
+
+.profile-menu-link:hover {
+    background: #f3e5d8;
+}
