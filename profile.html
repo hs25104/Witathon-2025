@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Activities Hub</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html"> <img src="assets/logo.png" class="logo"></a>
+
+            <div class="search-box">
+                <img src="assets/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="navbar-center">
+            <ul>
+                <li><a href="#" class="active-link"><img src="assets/home.png"> <span>Home</span> </a></li>
+                <li><a href="#"><img src="assets/group.png"> <span>My Groups</span></a></li>
+                <li><a href="#"><img src="assets/event.png"> <span>My Events</span></a></li>
+                <li><a href="#"><img src="assets/notifications.png"> <span>Notifications</span></a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="online">
+                <img src="assets/user.png" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+
+        <!------- profile drop down menu ------- -->
+
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="assets/user.png">
+                    <div>
+                        <h3>Holly Smith</h3>
+                        <a href="#">View your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/settings.png">
+                    <p>Settings</p>
+                    <span></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/help.png">
+                    <p>Help</p>
+                    <span></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/logout.png">
+                    <p>Logout</p>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!------- navbar end ------- -->
+
+    <!------- profile page ------- -->
+
+    <div class="container">
+        <div class="profile-main">
+            <div class="profile-container">
+                <img src="assets/cover-pic.png" width="100%">
+                <div class="profile-container-inner">
+                    <img src="assets/user.png" class="profile-pic">
+                    <h1>Holly Smith</h1>
+                    <b>University of Bath</b>
+                    <p>Student</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            let profileMenu = document.getElementById("profileMenu")
+
+            function toggleMenu(){
+                profileMenu.classList.toggle("open-menu");
+            }
+        </script>
+
+
+    </body>
+</html>

@@ -35,9 +35,40 @@
 
         <div class="navbar-right">
             <div class="online">
-                <img src="assets/user.png" class="nav-profile-img">
+                <img src="assets/user.png" class="nav-profile-img" onclick="toggleMenu()">
             </div>
         </div>
+
+        <!------- profile drop down menu ------- -->
+
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="assets/user.png">
+                    <div>
+                        <h3>Holly Smith</h3>
+                        <a href="#">View your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/settings.png">
+                    <p>Settings</p>
+                    <span></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/help.png">
+                    <p>Help</p>
+                    <span></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/logout.png">
+                    <p>Logout</p>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+
     </nav>
 
     <!------- navbar end ------- -->
@@ -70,10 +101,10 @@
 
             <div class="post">
                 <div class="post-author">
-                    <img src="assets/user2.png">
+                    <img src="assets/user4.png">
                     <div>
-                        <h1>John Dykes</h1>
-                        <small>Community Leader at University of Bath</small>
+                        <h1>Jenny Foster</h1>
+                        <small>Community Leader at Park Run</small>
                         <small>2 hours ago</small>
                     </div>
                 </div>
@@ -124,11 +155,11 @@
 
             <div class="post">
                 <div class="post-author">
-                    <img src="assets/user2.png">
+                    <img src="assets/user3.png">
                     <div>
-                        <h1>John Dykes</h1>
-                        <small>Community Leader at University of Bath</small>
-                        <small>2 hours ago</small>
+                        <h1>Amanda Locke</h1>
+                        <small>Community Leader at Twerton Community Network</small>
+                        <small>5 hours ago</small>
                     </div>
                 </div>
                 <h3>🍴 Cooking Together: A Class for All Ages! 🍴</h3> <br>
@@ -175,9 +206,9 @@
                 <div class="post-author">
                     <img src="assets/user2.png">
                     <div>
-                        <h1>John Dykes</h1>
+                        <h1>John Smith</h1>
                         <small>Community Leader at University of Bath</small>
-                        <small>2 hours ago</small>
+                        <small>12 hours ago</small>
                     </div>
                 </div>
                 <h3>🌟 Bridging Generations: Older Adults Teaching the Next Generation! 🌟</h3> <br>
@@ -219,5 +250,15 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            let profileMenu = document.getElementById("profileMenu")
+
+            function toggleMenu(){
+                profileMenu.classList.toggle("open-menu");
+            }
+        </script>
+
+
     </body>
 </html>
