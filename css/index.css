@@ -138,6 +138,7 @@ a{
     border-style: solid;
     border-color: #6a9c89;
     border-width: 3px;
+    position: sticky;
 }
 
 .sidebar-profile-info{
@@ -264,17 +265,33 @@ a{
     font-size: 14px;
     border-bottom: 3px solid #f17b47;
     padding-bottom: 6px;
+    flex-direction: row;
 }
 
 .post-stats div{
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
 .post-stats img{
     width: 20px;
     margin-right: 2px;
 }
+
+.post-activity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.post-activity-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 
 .liked-users{
     margin-left: 20px;
@@ -476,8 +493,8 @@ a{
     }
     .left-sidebar{
         flex-basis: 100%;
-        position: relative;
         top: unset;
+        height: 100vh;
     }
     .main-content{
         flex-basis: 100%;
